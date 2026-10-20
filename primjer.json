@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "example": true,
+  "crops": [
+    {
+      "name": "Pšenica (primjer)",
+      "area": 1000
+    }
+  ],
+  "treatments": [
+    {
+      "crop": 0,
+      "name": "Ilustrativni tretman 1",
+      "area": 1000,
+      "days": 5,
+      "hours": 10,
+      "B": 60,
+      "C": 80,
+      "D": 80,
+      "waterT": 200,
+      "waterD": 20
+    },
+    {
+      "crop": 0,
+      "name": "Ilustrativni tretman 2",
+      "area": 1000,
+      "days": 5,
+      "hours": 10,
+      "B": 60,
+      "C": 80,
+      "D": 80,
+      "waterT": 200,
+      "waterD": 20
+    },
+    {
+      "crop": 0,
+      "name": "Ilustrativni tretman 3",
+      "area": 1000,
+      "days": 5,
+      "hours": 10,
+      "B": 60,
+      "C": 80,
+      "D": 80,
+      "waterT": 200,
+      "waterD": 20
+    },
+    {
+      "crop": 0,
+      "name": "Ilustrativni tretman 4",
+      "area": 1000,
+      "days": 5,
+      "hours": 10,
+      "B": 60,
+      "C": 80,
+      "D": 80,
+      "waterT": 200,
+      "waterD": 20
+    },
+    {
+      "crop": 0,
+      "name": "Ilustrativni tretman 5",
+      "area": 1000,
+      "days": 5,
+      "hours": 10,
+      "B": 60,
+      "C": 80,
+      "D": 80,
+      "waterT": 200,
+      "waterD": 20
+    }
+  ],
+  "items": [
+    {
+      "name": "T100 letjelica",
+      "q": 1,
+      "p": 9647,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Sustav prskanja",
+      "q": 1,
+      "p": 2062,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "C12000 punjač",
+      "q": 1,
+      "p": 1384,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "DB2160 baterije",
+      "q": 3,
+      "p": 2725,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": true
+    },
+    {
+      "name": "Rasipač 150 l",
+      "q": 1,
+      "p": 1969,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Edukacija",
+      "q": 1,
+      "p": 2999,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Operativni priručnik",
+      "q": 1,
+      "p": 1950,
+      "discount": 5,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Agregat",
+      "q": 1,
+      "p": 4090,
+      "discount": 0,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "DroneFiller",
+      "q": 1,
+      "p": 4900,
+      "discount": 0,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Tronožac i baterije kontrolera",
+      "q": 1,
+      "p": 200,
+      "discount": 0,
+      "group": "first",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Druga letjelica T100",
+      "q": 1,
+      "p": 9647,
+      "discount": 0,
+      "group": "second",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Drugi sustav prskanja",
+      "q": 1,
+      "p": 2062,
+      "discount": 0,
+      "group": "second",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Drugi C12000 punjač",
+      "q": 1,
+      "p": 1384,
+      "discount": 0,
+      "group": "second",
+      "on": true,
+      "battery": false
+    },
+    {
+      "name": "Druge DB2160 baterije",
+      "q": 3,
+      "p": 2725,
+      "discount": 0,
+      "group": "second",
+      "on": true,
+      "battery": true
+    }
+  ],
+  "mode": "parallel",
+  "keepC": true,
+  "keepD": true,
+  "grid1": false,
+  "grid2": false,
+  "replacements": [
+    {
+      "scenario": "B",
+      "year": 4,
+      "q": 3
+    },
+    {
+      "scenario": "B",
+      "year": 8,
+      "q": 3
+    },
+    {
+      "scenario": "C",
+      "year": 4,
+      "q": 3
+    },
+    {
+      "scenario": "C",
+      "year": 8,
+      "q": 3
+    },
+    {
+      "scenario": "D",
+      "year": 4,
+      "q": 6
+    },
+    {
+      "scenario": "D",
+      "year": 8,
+      "q": 6
+    }
+  ],
+  "farm": {
+    "area": 1000,
+    "vat": 25,
+    "deduct": 100,
+    "grant": 0,
+    "grant2": 0,
+    "years": 10
+  },
+  "tractor": {
+    "width": 24,
+    "rate": 15,
+    "diesel": 12,
+    "fuel": 1.4,
+    "people": 1,
+    "wage": 15,
+    "maint": 8,
+    "fixed": 1500,
+    "common": 1200,
+    "water": 3,
+    "prep": 1,
+    "sale": 18000,
+    "value": 20000,
+    "residual": 5000,
+    "life": 10
+  },
+  "drone": {
+    "rate1": 12,
+    "rate2": 20,
+    "battery": 2725,
+    "cycles": 800,
+    "haCycle": 3,
+    "water": 3,
+    "life": 8,
+    "residual": 3000,
+    "residual2": 2000
+  },
+  "one": {
+    "pilots": 1,
+    "helpers": 1,
+    "wage": 15,
+    "prep": 1.5,
+    "service": 1000,
+    "insurance": 800,
+    "other": 300,
+    "transport": 1000,
+    "chargers": 1,
+    "generators": 1,
+    "genHours": 100,
+    "genLitres": 5,
+    "petrol": 1.5,
+    "kwh": 0,
+    "electricity": 0
+  },
+  "extra": {
+    "outPrice": "",
+    "outRate": "",
+    "backupPrice": "",
+    "backupRate": "",
+    "backupShare": "",
+    "delay": "",
+    "trampling": 0,
+    "timely": 0,
+    "chem": 0
+  },
+  "two": {
+    "pilots": 2,
+    "helpers": 1,
+    "wage": 15,
+    "prep": 1.5,
+    "service": 1800,
+    "insurance": 1400,
+    "other": 300,
+    "transport": 1000,
+    "chargers": 2,
+    "generators": 1,
+    "genHours": 160,
+    "genLitres": 5,
+    "petrol": 1.5,
+    "kwh": 0,
+    "electricity": 0
+  },
+  "B": {
+    "outPrice": 30,
+    "outRate": 20,
+    "backupPrice": 40,
+    "backupRate": 20,
+    "backupShare": 2,
+    "delay": 2,
+    "trampling": 0,
+    "timely": 0,
+    "chem": 0
+  },
+  "C": {
+    "outPrice": 30,
+    "outRate": 20,
+    "backupPrice": 40,
+    "backupRate": 20,
+    "backupShare": 2,
+    "delay": 2,
+    "trampling": 0,
+    "timely": 0,
+    "chem": 0
+  },
+  "D": {
+    "outPrice": 30,
+    "outRate": 20,
+    "backupPrice": 40,
+    "backupRate": 20,
+    "backupShare": 2,
+    "delay": 2,
+    "trampling": 0,
+    "timely": 0,
+    "chem": 0
+  }
+}

@@ -1,0 +1,23 @@
+// Pokretanje: node tests.cjs (bez vanjskih paketa).
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const html=fs.readFileSync(__dirname+'/index.html','utf8');
+let script=html.match(/<script>([\s\S]*)<\/script>/)[1];
+script=script.slice(0,script.indexOf("document.getElementById('forms').addEventListener"));
+const ctx=vm.createContext({localStorage:{getItem:()=>null},Intl,console});vm.runInContext(script,ctx);
+const run=code=>vm.runInContext(code,ctx);
+run('state='+fs.readFileSync(__dirname+'/primjer.json','utf8'));
+let r=run('calculate(state)');assert(Object.values(r).every(r=>r.valid));
+assert.equal(r.B.investment,35966.7);assert.equal(r.D.investment-r.C.investment,21268);
+assert.equal(r.A.annual,5000);assert.equal(r.C.droneHa+r.C.outHa+r.C.backupHa,5000);
+assert.equal(r.C.wear,3920*2725/2400);assert.equal(r.C.dead[0].ok,false);
+assert.equal(run('calculate(fresh()).A.valid'),false);
+assert.equal(run("(()=>{let s=clone(state);s.one.transport='';return calculate(s).C.valid})()"),false);
+assert.equal(run("(()=>{let s=clone(state);s.one.transport=0;return calculate(s).C.valid})()"),true);
+assert.equal(run("(()=>{let s=clone(state);s.farm.deduct=0;return calculate(s).C.net})()"),44958.375);
+assert.equal(run("(()=>{let s=clone(state);s.farm.grant=10000;return calculate(s).C.netGrant})()"),25966.699999999997);
+assert.equal(run("(()=>{let s=clone(state);s.keepC=false;return calculate(s).C.net})()"),17966.699999999997);
+assert.match(run('pay(100,-5)'),/^Nema povrata/);assert.match(run('pay(100,0)'),/^Nema povrata/);
+assert.equal(run('pay(100,10)'),'10 god.');
+assert.equal(run("(()=>{let s=clone(state);s.treatments[0].C=101;return calculate(s).C.valid})()"),false);
+assert.equal(run("(()=>{let s=clone(state);s.drone.rate2=12;let r=calculate(s);return r.D.machine===2*r.C.machine})()"),true);
+console.log('Sve provjere računica prošle.');
